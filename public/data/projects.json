@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "My First Website",
+    "image": "/img/website.jpg",
+    "description": "This was my first project."
+  },
+  {
+    "id": 2,
+    "name": "The Adress Book Challange",
+    "image": "/img/adressBook.jpg",
+    "description": "Made an adress book using HTML, JavaScript and CSS."
+  },
+  {
+    "id": 3,
+    "name": "ATM Challange",
+    "image": "/img/atm.jpg",
+    "description": "Built an ATM simulator using Ruby."
+  }
+]
