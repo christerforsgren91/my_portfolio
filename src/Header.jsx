@@ -2,8 +2,8 @@ import React from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import { NavLink, Link } from 'react-router-dom'
 
-const Header = () => {
-  return (
+const Header = () => 
+   (
     <Segment inverted>
       <Menu inverted secondary>
         <Menu.Item
@@ -33,6 +33,6 @@ const Header = () => {
       </Menu>
     </Segment>
   )
-}
+
 
 export default Header
