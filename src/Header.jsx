@@ -2,8 +2,8 @@ import React from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import { NavLink, Link } from 'react-router-dom'
 
-const Header = () => {
-  return (
+const Header = () => 
+   (
     <Segment inverted>
       <Menu inverted secondary>
         <Menu.Item
@@ -24,6 +24,12 @@ const Header = () => {
         as={NavLink}
         to={{ pathname: './projects'}}
         />
+        <Menu.Item
+        id='cv-tab'
+        name='cv'
+        as={NavLink}
+        to={{ pathname: './cv'}}
+        />
         <Menu.Item position='right'
         id='contact-tab'
         name='contact'
@@ -33,6 +39,6 @@ const Header = () => {
       </Menu>
     </Segment>
   )
-}
+
 
 export default Header

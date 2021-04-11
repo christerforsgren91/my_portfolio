@@ -5,11 +5,9 @@ const About = () => {
   return (
     <Container>
       <h1 id='about-header'>About Me</h1>
-      <p>
-        My name is Christer.
-        Im a student at Craft Academy.
-        Right now we are learning React!
-      </p>
+      <p>My name is Christer.</p>
+      <p>Im a student at Craft Academy.</p>
+      <p>Right now we are learning React!</p>
     </Container>
   )
 }
