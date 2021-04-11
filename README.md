@@ -5,4 +5,5 @@
 - The portfolio is storing my projects
 ---
 # Deployed to Netlify
+- Visit the site here
 https://hardcore-swanson-ac366c.netlify.app
