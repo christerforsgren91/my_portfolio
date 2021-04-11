@@ -1,12 +1,3 @@
-describe('Portfolio interface', () => {
-  it('successfully renders', () => {
-    cy.visit('http://localhost:3000')
-    cy.get('#header').should('contain', 'My Portfolio')
-    cy.get('#footer').should('contain', 'Made with React')
-    cy.get('#hello').should('contain', 'Hello World')
-  })
-})
-
 describe('User can navigate the app', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
@@ -36,6 +27,10 @@ describe('User can navigate the app', () => {
     it('does not display Hello World', () => {
       cy.get('#hello').should('not.exist')
     })
+
+    it('does not display Cv header', () => {
+      cy.get('#cv-header').should('not.exist')
+    })
   })
 
   describe('to My Projects tab and it', () => {
@@ -62,6 +57,10 @@ describe('User can navigate the app', () => {
     it('does not displat Hello World', () => {
       cy.get('#hello').should('not.exist')
     })
+
+    it('does not display Cv header', () => {
+      cy.get('#cv-header').should('not.exist')
+    })
   })
 
   describe('to my Contact tab and it', () => {
@@ -87,6 +86,40 @@ describe('User can navigate the app', () => {
 
     it('does not displat Hello World', () => {
       cy.get('#hello').should('not.exist')
+    })
+
+    it('does not display Cv header', () => {
+      cy.get('#cv-header').should('not.exist')
+    })
+  })
+  
+  describe('to my Cv tab and it', () => {
+    beforeEach(() => {
+      cy.get('#cv-tab').click()
+    })
+
+    it('displays Cv in header', () => {
+      cy.get('#cv-header').should('contain', 'Christer Forsgren')
+    })
+
+    it('displays Cv name in url', () => {
+      cy.url().should('contain', 'cv')
+    })
+
+    it('does not display About Me header', () => {
+      cy.get('#about-header').should('not.exist')
+    })
+
+    it('does not display My Projects header', () => {
+      cy.get('#projects-header').should('not.exist')
+    })
+
+    it('does not displat Hello World', () => {
+      cy.get('#hello').should('not.exist')
+    })
+
+    it('does not display Contact header', () => {
+      cy.get('#contact-header').should('not.exist')
     })
   })
 
@@ -115,36 +148,9 @@ describe('User can navigate the app', () => {
     it('does not display Contact header', () => {
       cy.get('#contact-header').should('not.exist')
     })
-  })
 
-  describe('to my CV tab and it', () => {
-    beforeEach(() => {
-      cy.get('#cv-tab').click()
-    })
-
-    it('displays CV in header', () => {
-      cy.get('#cv-header').should('contain', 'CV')
-    })
-
-    it('displays cv name in url', () => {
-      cy.url().should('contain', 'cv')
-    })
-    it()
-
-    it('does not display About Me header', () => {
-      cy.get('#about-header').should('not.exist')
-    })
-
-    it('does not display My Projects header', () => {
-      cy.get('#projects-header').should('not.exist')
-    })
-
-    it('does not displat Hello World', () => {
-      cy.get('#hello').should('not.exist')
-    })
-
-    it('does not display Contact header', () => {
-      cy.get('#contact-header').should('not.exist')
+    it('does not display Cv header', () => {
+      cy.get('#cv-header').should('not.exist')
     })
   })
 })
