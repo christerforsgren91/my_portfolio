@@ -1,9 +1,10 @@
 import React from 'react'
+import { Header } from 'semantic-ui-react'
 
 const Footer = () => {
   return (
     <footer>
-      <p id='footer'>Made with React {React.version}</p>
+      <Header id='footer'>Made with React {React.version}</Header>
     </footer>
   )
 }
